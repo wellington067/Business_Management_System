@@ -1,0 +1,12 @@
+windows/*
+linux/*
+android/*
+macos/*
+web/*
+ios/*
+.vscode/*
+analysis_options.yaml
+.dart_tool/
+.idea/
+build/
+pubspec.lock
