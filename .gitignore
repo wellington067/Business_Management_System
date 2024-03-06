@@ -1,5 +1,12 @@
-#  
-
+android/
+windows/
+ios/
+linux/
+pubspec.lock
+analysis_options.yaml
+macos/
+web/
+test/
 # Miscellaneous
 *.class
 *.log
