@@ -1,3 +1,5 @@
+import 'package:business_management_system/assets/assets_index.dart';
+import 'package:business_management_system/shared/constants/style_constantes.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -12,10 +14,8 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        
-        title: const Text("Hello World!"),
-        centerTitle: true,
-        backgroundColor: const Color.fromARGB(255, 12, 211, 242),
+      title: Image.asset(Assets.logoLmts),
+      backgroundColor: backgroundColorAll,
       ),
     );
   }
