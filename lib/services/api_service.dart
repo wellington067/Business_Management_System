@@ -13,5 +13,5 @@ class GitHubRepository {
       // ignore: avoid_print
       print(e);
     }
-}
+  }
 }
