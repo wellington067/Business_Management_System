@@ -34,7 +34,7 @@ class _HomePageState extends State<HomePage> {
                 Radius.circular(79),
               ),
               child: Image.asset(
-                Assets.logoLmts,
+                Assets.user,
               ),
             ),
           ),

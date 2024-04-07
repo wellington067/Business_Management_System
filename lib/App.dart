@@ -1,4 +1,4 @@
-import 'package:business_management_system/screens/home/home_page.dart';
+import 'package:business_management_system/screens/signIn/sign_in_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
@@ -13,7 +13,7 @@ class App extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      home: const HomePage(),
+      home: SignInPage(),
     );
   }
 }
