@@ -3,6 +3,7 @@ windows/
 ios/
 linux/
 pubspec.lock
+test/widget_test.dart
 analysis_options.yaml
 macos/
 web/

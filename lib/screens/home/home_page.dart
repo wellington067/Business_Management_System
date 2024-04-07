@@ -1,6 +1,8 @@
 import 'package:business_management_system/assets/index.dart';
+import 'package:business_management_system/controllers/home_page_controller.dart';
 import 'package:business_management_system/shared/constants/style_constantes.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -12,16 +14,30 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
+    final homeController = Get.find<HomePageController>();
+
     return Scaffold(
       appBar: AppBar(
-        leading: Row(
-          children: [
-            IconButton(onPressed: () => {}, icon: Image.asset(Assets.logoLmts)),
-            const Text(
-              "name of user",
-              style: TextStyle(color: Colors.white),
-            )
-          ],
+        title: Obx(
+          () => Text(
+            homeController.name.value,
+            style: const TextStyle(color: textColor1),
+          ),
+        ),
+        toolbarHeight: 80,
+        leading: GestureDetector(
+          onTap: () {},
+          child: Padding(
+            padding: const EdgeInsets.all(0),
+            child: ClipRRect(
+              borderRadius: const BorderRadius.all(
+                Radius.circular(79),
+              ),
+              child: Image.asset(
+                Assets.logoLmts,
+              ),
+            ),
+          ),
         ),
         backgroundColor: backgroundColorAll,
       ),
@@ -30,6 +46,11 @@ class _HomePageState extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            Container(
+              width: double.infinity,
+              height: 200,
+              color: backgroundColorAll,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
