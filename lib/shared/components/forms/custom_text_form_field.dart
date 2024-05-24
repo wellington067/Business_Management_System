@@ -121,7 +121,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
     });
   }
 
-  void _updateObscureText() {
+  void updateObscureText() {
     setState(() {
       _obscureText = widget.controller?.text.isEmpty ?? true;
     });

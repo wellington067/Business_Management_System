@@ -3,7 +3,6 @@ import 'package:business_management_system/shared/components/forms/custom_text_f
 import 'package:business_management_system/shared/constants/style_constantes.dart';
 import 'package:business_management_system/shared/validations/mixin_validator.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class SignInPage extends StatelessWidget with ValidationMixin {
   SignInPage({super.key});
@@ -50,6 +49,7 @@ class SignInPage extends StatelessWidget with ValidationMixin {
                       CustomTextFormField(
                         hintText: 'Senha',
                         icon: Icons.lock,
+                        keyboardType: TextInputType.visiblePassword,
                         validateForm: (value) => isValidPassword(value),
                       ),
                       const SizedBox(
@@ -60,7 +60,6 @@ class SignInPage extends StatelessWidget with ValidationMixin {
                         children: [
                           GestureDetector(
                             onTap: () {
-                              print('indo para recuperaçao de senha');
                             },
                             child: const Text(
                               'Esqueceu a senha?',
@@ -72,6 +71,7 @@ class SignInPage extends StatelessWidget with ValidationMixin {
                       const SizedBox(
                         height: 40,
                       ),
+                      // ignore: sized_box_for_whitespace
                       Container(
                         width: double.infinity,
                         child: ElevatedButton(
@@ -125,14 +125,11 @@ class SignInPage extends StatelessWidget with ValidationMixin {
                       const SizedBox(
                         height: 50,
                       ),
-                      const Row(
+                       const Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text('Não possui conta?'),
-                          Text(
-                            ' Crie aqui',
-                            style: TextStyle(color: textColor3),
-                          )
+                           Text('Não possui conta?'),
+                        //  TextButton(onPressed: PageRoute., child: child)
                         ],
                       )
                     ],

@@ -1,4 +1,7 @@
-import 'package:business_management_system/screens/signIn/sign_in_page.dart';
+
+import 'package:business_management_system/views/screens_index.dart';
+import 'package:business_management_system/views/signIn/sign_in_page.dart';
+import 'package:business_management_system/views/signOut/sign_out_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
@@ -14,6 +17,8 @@ class App extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       home: SignInPage(),
+      routes: {
+        Screens.signOutPage: (BuildContext context) => const SignOutPage()},
     );
   }
 }

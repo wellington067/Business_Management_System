@@ -8,4 +8,5 @@ import 'package:get/get_instance/get_instance.dart';
 void main() {
   Get.put(HomePageController());
   runApp(const App());
+    
 }
